@@ -1,0 +1,8 @@
+    name: PikachuPlugin
+    main: me.JamieSinn.Bukkit.Pikachu
+    version: 0.1
+    description: >
+                 Pikachu use Thunderbolt!
+    commands:
+      pikachu:
+        description: Pikachu use Thunderbolt!
