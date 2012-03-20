@@ -4,6 +4,7 @@ import java.util.logging.Logger;
 import org.bukkit.World;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -37,7 +38,10 @@ public class Pikachu extends JavaPlugin {
 			if (args.length == 0)
 			{
 
-				player.sendMessage(ChatColor.DARK_RED + "Improper Syntax /pikachu <username>");
+				Block targetblock = player.getTargetBlock(null, 50);
+				Location location = targetblock.getLocation();
+				world.strikeLightning(location);
+				player.sendMessage(ChatColor.YELLOW + "Pikachuu!!");
 
 			}
 			else if(args.length == 1)
@@ -56,28 +60,7 @@ public class Pikachu extends JavaPlugin {
 				player.sendMessage(ChatColor.RED + "PLAYER NOT ONLINE");
 			}
 		}
-		if (commandLabel.equalsIgnoreCase("seehealth"))
-		{
-			if (args.length == 0)
-			{
 
-				player.sendMessage(ChatColor.GREEN + "Your Health is:" + player.getHealth());
-
-			}
-			else if(args.length == 1)
-			{
-				if(player.getServer().getPlayer(args[0]) !=null)
-				{
-				Player targetPlayer1 = player.getServer().getPlayer(args [0]);
-
-			 player.sendMessage(ChatColor.GREEN  + "Target Player Health is: " + targetPlayer1.getHealth());
-				}
-			}
-			else
-			{
-				player.sendMessage(ChatColor.RED + "PLAYER NOT ONLINE");
-			}
-		}
 		return false;
 	 
 	
