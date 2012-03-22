@@ -4,11 +4,11 @@
     description: >
                  Pikachu use Thunderbolt!
 
-commands:
+    commands:
       pikachu:
         description: Pikachu use Thunderbolt!
             
-permissions:
+    permissions:
     PikachuPlugin.*:
         description: Gives access to all /pikachu commands
         children:
