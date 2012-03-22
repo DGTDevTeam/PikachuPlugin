@@ -1,23 +1,32 @@
-    name: PikachuPlugin
-    main: me.JamieSinn.Bukkit.Pikachu
-    version: 0.1
-    description: >
-                 Pikachu use Thunderbolt!
+name: Pikachu Plugin
+description: Pikachu use Thunderbolt!
+version: 1.7
+main: me.JamieSinn.Bukkit.PikachuPlugin
+author: JamieSinn
+website: http://dev.bukkit.org/server-mods/pikachuplugin/
 
-    commands:
-      pikachu:
-        description: Pikachu use Thunderbolt!
+commands:
+   pikachu:
+      description: Shocks location that you are looking at
+      usage: /<command>
+      permission: PikachuPlugin.aim
+      permission-message: You don't have permission to do this.
+   pikachu:
+      description: Shocks target Player
+      usage: /<command> <player>
+      permission: PikachuPlugin.player
+      permission-message: You don't have permission to do this.
             
-    permissions:
+permissions:
     PikachuPlugin.*:
-        description: Gives access to all /pikachu commands
+        description: Gives access to all PikachuPlugin commands
         children:
-            PikachuPlugin.aim: true
+            PikachuPlugin.user: true
             PikachuPlugin.player: true
     PikachuPlugin.aim:
-        description: Allows you to use /pikachu
+        description: Allows you to use the "/pikachu" command.
         default: op
     PikachuPlugin.player:
-        description: Allows you to use /pikachu <player>
+        description: Allows you to use the "/pikachu <user>" command.
         default: op 
 
