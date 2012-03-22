@@ -46,7 +46,7 @@ public class Pikachu extends JavaPlugin {
 			    }
 			    else
 			    {
-			        player.sendMessage(ChatColor.WHITE + "Uknown Command. Type 'help' for help.");
+			        player.sendMessage(ChatColor.WHITE + "Unknown Command. Type 'help' for help.");
 			    }
 
 			
