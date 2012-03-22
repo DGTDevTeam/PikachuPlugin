@@ -3,10 +3,11 @@
     version: 0.1
     description: >
                  Pikachu use Thunderbolt!
+
 commands:
       pikachu:
         description: Pikachu use Thunderbolt!
-		
+            
 permissions:
     PikachuPlugin.*:
         description: Gives access to all /pikachu commands
@@ -18,5 +19,5 @@ permissions:
         default: op
     PikachuPlugin.player:
         description: Allows you to use /pikachu <player>
-        default: op
+        default: op 
 
