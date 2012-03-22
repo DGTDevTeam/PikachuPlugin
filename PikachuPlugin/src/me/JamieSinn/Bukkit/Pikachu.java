@@ -37,22 +37,41 @@ public class Pikachu extends JavaPlugin {
 		{
 			if (args.length == 0)
 			{
-
-				Block targetblock = player.getTargetBlock(null, 50);
+			    if(player.hasPermission("PikachuPlugin.aim")) 
+			    {
+			  	Block targetblock = player.getTargetBlock(null, 50);
 				Location location = targetblock.getLocation();
 				world.strikeLightning(location);
-				player.sendMessage(ChatColor.YELLOW + "Pikachuu!!");
+				player.sendMessage(ChatColor.YELLOW + "Pikachuu!!");  
+			    }
+			    else
+			    {
+			        player.sendMessage(ChatColor.WHITE + "Uknown Command. Type 'help' for help.");
+			    }
+
+			
+
+
 
 			}
 			else if(args.length == 1)
 			{
 				if(player.getServer().getPlayer(args[0]) !=null)
 				{
+				    if(player.hasPermission("PikachuPlugin.player")) 
+				    {
 				Player targetPlayer1 = player.getServer().getPlayer(args [0]);
 				Location location = targetPlayer1.getLocation();
 				world.strikeLightning(location);
 				world.createExplosion(location, 2);
-				player.sendMessage(ChatColor.YELLOW + "Pikachuu!!");
+				player.sendMessage(ChatColor.YELLOW + "Pikachuu!!");				      
+				     }
+				    else
+				    {
+				    	player.sendMessage(ChatColor.WHITE + "Uknown Command. Type 'help' for help.");
+				    }
+
+
 				}
 			}
 			else

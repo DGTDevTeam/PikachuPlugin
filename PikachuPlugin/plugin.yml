@@ -3,6 +3,22 @@
     version: 0.1
     description: >
                  Pikachu use Thunderbolt!
+	Author:JamieSinn
+	Website:https://github.com/JamieSinn/PikachuPlugin
     commands:
       pikachu:
         description: Pikachu use Thunderbolt!
+		
+	permissions:
+    PikachuPlugin.*:
+        description: Gives access to all /pikachu commands
+        children:
+            PikachuPlugin.aim: true
+            PikachuPlugin.player: true
+    PikachuPlugin.aim:
+        description: Allows you to use /pikachu
+        default: op
+    PikachuPlugin.player:
+        description: Allows you to use /pikachu <player>
+        default: op
+
